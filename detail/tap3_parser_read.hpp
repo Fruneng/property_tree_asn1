@@ -94,8 +94,8 @@ namespace boost { namespace property_tree { namespace detail {namespace tap_pars
     void trans_asn1_ptree(boost::property_tree::ptree &pt, boost::property_tree::ptree& new_pt)
     {
         static const std::set<tap_element> tap3_lookup_map(
-            &(internal::lookup_tables<3,11>::tap_elements[0]), 
-            &(internal::lookup_tables<3,11>::tap_elements[0]) + sizeof(internal::lookup_tables<3,11>::tap_elements)/sizeof(tap_element));
+            &(internal::lookup_tables<Version, Release>::tap_elements[0]), 
+            &(internal::lookup_tables<Version, Release>::tap_elements[0]) + sizeof(internal::lookup_tables<3,11>::tap_elements)/sizeof(tap_element));
     
         
         trans_asn1_ptree_internal(pt, new_pt, tap3_lookup_map);
