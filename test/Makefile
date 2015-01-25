@@ -2,7 +2,7 @@ CC=gcc
 OBJECT=
 TARGET= test
 
-INCLUDE=-I/usr/local/include -I/usr/include
+INCLUDE=-I/usr/local/include -I/usr/include -I../
 LIB= -lstdc++
 WALL= -g -Wall
 
