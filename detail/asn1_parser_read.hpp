@@ -85,13 +85,13 @@ namespace boost { namespace property_tree { namespace asn1_parser
         {
             unsigned long long ret = 0;
             
-            int postive = (*data.begin()) & 0x80;
+            int negative = (*data.begin()) & 0x80;
             for(std::string::const_iterator it=data.begin(); it!=data.end(); it++)
             {
                 ret <<= 8;
                 ret |= reinterpret_cast<const unsigned char&>(*it);
             }
-            if (postive)
+            if (negative)
             {
                 for(int i = data.length(); i<8; i++)
                 {
