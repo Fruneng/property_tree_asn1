@@ -16,3 +16,33 @@ support this operator like:
   
     std::cout << new_pt.get<std::string>("TransferBatch.BatchControlInfo.Sender") << std::endl;
     std::cout << new_pt.get<std::string>("TransferBatch.BatchControlInfo.Recipient ") << std::endl;
+
+
+a asn1 file contain:
+
+      TransferBatch
+        BatchControlInfo
+          Sender .......................................... DEUD2
+          Recipient ....................................... GRCPF
+          FileSequenceNumber .............................. 10000
+          FileCreationTimeStamp
+            LocalTimeStamp ................................ 20050907120940
+            UtcTimeOffset ................................. +0300
+          TransferCutOffTimeStamp
+            LocalTimeStamp ................................ 20050907120940
+            UtcTimeOffset ................................. +0300
+          FileAvailableTimeStamp
+            LocalTimeStamp ................................ 20050907120940
+            UtcTimeOffset ................................. +0300
+          SpecificationVersionNumber ...................... 3
+          ReleaseVersionNumber ............................ 11
+          RapFileSequenceNumber ........................... 09999
+          OperatorSpecInformationList
+            OperatorSpecInformation(1) .................... Test case generated with Semantix Toolkit
+        AccountingInfo
+          Taxation
+            Taxation(1)
+              TaxCode ..................................... 0
+              TaxType ..................................... 01
+              TaxRate ..................................... 1000000
+        ...
