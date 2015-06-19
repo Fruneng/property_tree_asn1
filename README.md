@@ -16,6 +16,8 @@ support this operator like:
   
     std::cout << new_pt.get<std::string>("TransferBatch.BatchControlInfo.Sender") << std::endl;
     std::cout << new_pt.get<std::string>("TransferBatch.BatchControlInfo.Recipient ") << std::endl;
+    
+    write_xml(filename+".xml", new_pt);
 
 
 a asn1 file contain:
